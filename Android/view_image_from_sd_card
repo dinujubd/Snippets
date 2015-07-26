@@ -1,0 +1,7 @@
+private void viewImage()
+{
+	setContentView(R.layout.main);
+    ImageView jpgView = (ImageView)findViewById(R.id.imageView);
+    Bitmap bitmap = BitmapFactory.decodeFile("/sdcard/sample-1.jpg");
+    jpgView.setImageBitmap(bitmap);
+}
