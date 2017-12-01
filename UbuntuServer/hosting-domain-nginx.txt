@@ -1,0 +1,13 @@
+1. Create a new folder to /var/www/ directory. This one is document root
+2. Create a permission to that directory which should not be a root permission
+	command: sudo chown -R $USER:$USER /var/www/example.com/html
+3. Create a server block file in /etc/nginx/sites-available/ directory
+	commad to get default one: sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/example.com
+	You have to update as you need
+4. Enable that server block
+	command: sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+5. Test nginx
+	command: sudo nginx -t
+6. Restart nginx
+	commad: sudo systemctl nginx restart
+7. Test
